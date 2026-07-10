@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragnya Prasanna Athri — Cancer Immunotherapy Researcher</title>
+  <meta name="description" content="Cancer immunotherapy and drug discovery research portfolio." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       FLOATING GLOWING IMMUNE CELLS
+       6 organisms drift and glow across the page.
+       Hover over any to see a fun fact.
+       ============================================================ -->
+  <div class="cells-bg" aria-hidden="true">
+
+    <!-- T-CELL (cyan glow, spiky microvilli) -->
+    <div class="organism o1">
+      <div class="org-halo halo-cyan"></div>
+      <svg class="org-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="tc-glow" cx="45%" cy="45%">
+            <stop offset="0%" stop-color="#4FE3D1" stop-opacity="0.55"/>
+            <stop offset="60%" stop-color="#4FE3D1" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#4FE3D1" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="tc-blur"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <circle cx="100" cy="100" r="85" fill="url(#tc-glow)" filter="url(#tc-blur)"/>
+        <g stroke="#4FE3D1" stroke-width="1.5" fill="none" opacity="0.6">
+          <line x1="100" y1="100" x2="100" y2="20"/><line x1="100" y1="100" x2="170" y2="45"/>
+          <line x1="100" y1="100" x2="185" y2="105"/><line x1="100" y1="100" x2="165" y2="170"/>
+          <line x1="100" y1="100" x2="100" y2="185"/><line x1="100" y1="100" x2="30" y2="165"/>
+          <line x1="100" y1="100" x2="15" y2="100"/><line x1="100" y1="100" x2="35" y2="35"/>
+        </g>
+        <circle cx="100" cy="100" r="55" fill="rgba(79,227,209,0.08)" stroke="#4FE3D1" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="90" cy="92" r="22" fill="rgba(79,227,209,0.15)" stroke="#4FE3D1" stroke-width="1" opacity="0.9"/>
+        <circle cx="85" cy="88" r="4" fill="#4FE3D1"/>
+      </svg>
+      <div class="org-tip">
+        <strong>T Cell</strong>
+        <span>Every T-cell has its own unique receptor — about 10¹⁵ possible versions, more than grains of sand on Earth.</span>
+      </div>
+    </div>
+
+    <!-- NK CELL (green glow, kidney-shaped nucleus + granules) -->
+    <div class="organism o2">
+      <div class="org-halo halo-green"></div>
+      <svg class="org-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="nk-glow"><stop offset="0%" stop-color="#A8FF60" stop-opacity="0.55"/><stop offset="100%" stop-color="#A8FF60" stop-opacity="0"/></radialGradient>
+          <filter id="nk-blur"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <circle cx="100" cy="100" r="88" fill="url(#nk-glow)" filter="url(#nk-blur)"/>
+        <circle cx="100" cy="100" r="62" fill="rgba(168,255,96,0.09)" stroke="#A8FF60" stroke-width="1.5" opacity="0.8"/>
+        <path d="M78,75 Q60,90 65,115 Q70,140 100,138 Q120,140 125,120 Q135,105 118,80 Q100,65 78,75 Z"
+              fill="rgba(168,255,96,0.15)" stroke="#A8FF60" stroke-width="1" opacity="0.9"/>
+        <circle cx="75" cy="55" r="3.5" fill="#A8FF60" opacity="0.9"/>
+        <circle cx="130" cy="60" r="3" fill="#A8FF60" opacity="0.7"/>
+        <circle cx="145" cy="105" r="4" fill="#A8FF60" opacity="0.85"/>
+        <circle cx="135" cy="145" r="3" fill="#A8FF60" opacity="0.7"/>
+        <circle cx="80" cy="150" r="3.5" fill="#A8FF60" opacity="0.85"/>
+        <circle cx="50" cy="120" r="3" fill="#A8FF60" opacity="0.7"/>
+        <circle cx="55" cy="85" r="3.5" fill="#A8FF60" opacity="0.85"/>
+      </svg>
+      <div class="org-tip">
+        <strong>Natural Killer Cell</strong>
+        <span>NK cells kill on sight — no antigen check needed. They spot cells that stopped displaying "self" and punch a hole in them within minutes.</span>
+      </div>
+    </div>
+
+    <!-- MACROPHAGE (magenta glow, amoeboid with pseudopods + phagosomes) -->
+    <div class="organism o3">
+      <div class="org-halo halo-magenta"></div>
+      <svg class="org-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="mp-glow"><stop offset="0%" stop-color="#FF5EE0" stop-opacity="0.55"/><stop offset="100%" stop-color="#FF5EE0" stop-opacity="0"/></radialGradient>
+          <filter id="mp-blur"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <ellipse cx="100" cy="100" rx="82" ry="78" fill="url(#mp-glow)" filter="url(#mp-blur)"/>
+        <path d="M50,60 Q20,75 25,110 Q10,145 55,160 Q80,190 130,175 Q175,170 180,120 Q195,80 155,50 Q120,25 85,45 Q65,50 50,60 Z"
+              fill="rgba(255,94,224,0.08)" stroke="#FF5EE0" stroke-width="1.5" opacity="0.8"/>
+        <circle cx="100" cy="100" r="28" fill="rgba(255,94,224,0.15)" stroke="#FF5EE0" stroke-width="1" opacity="0.9"/>
+        <circle cx="95" cy="96" r="5" fill="#FF5EE0" opacity="0.9"/>
+        <circle cx="65" cy="125" r="5" fill="rgba(255,94,224,0.35)" stroke="#FF5EE0" stroke-width="0.8" opacity="0.85"/>
+        <circle cx="140" cy="75" r="4" fill="rgba(255,94,224,0.35)" stroke="#FF5EE0" stroke-width="0.8" opacity="0.85"/>
+        <circle cx="130" cy="145" r="3.5" fill="rgba(255,94,224,0.35)" stroke="#FF5EE0" stroke-width="0.8" opacity="0.85"/>
+      </svg>
+      <div class="org-tip">
+        <strong>Macrophage</strong>
+        <span>The name means "big eater" in Greek — a single macrophage can engulf and digest over 100 bacteria before it dies.</span>
+      </div>
+    </div>
+
+    <!-- B CELL (magenta-purple glow, big nucleus + antibodies floating off) -->
+    <div class="organism o4">
+      <div class="org-halo halo-magenta"></div>
+      <svg class="org-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="bc-glow"><stop offset="0%" stop-color="#FF5EE0" stop-opacity="0.5"/><stop offset="100%" stop-color="#FF5EE0" stop-opacity="0"/></radialGradient>
+          <filter id="bc-blur"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <circle cx="100" cy="100" r="82" fill="url(#bc-glow)" filter="url(#bc-blur)"/>
+        <circle cx="100" cy="100" r="60" fill="rgba(255,94,224,0.08)" stroke="#FF5EE0" stroke-width="1.5" opacity="0.8"/>
+        <!-- large nucleus (B cell signature) -->
+        <circle cx="95" cy="95" r="38" fill="rgba(255,94,224,0.16)" stroke="#FF5EE0" stroke-width="1" opacity="0.9"/>
+        <circle cx="85" cy="82" r="3" fill="#FF5EE0" opacity="0.8"/>
+        <circle cx="105" cy="90" r="2" fill="#FF5EE0" opacity="0.7"/>
+        <!-- antibodies floating away -->
+        <g stroke="#FF5EE0" stroke-width="1.3" fill="none" opacity="0.85">
+          <g transform="translate(160,40) rotate(20)"><line x1="0" y1="0" x2="0" y2="8"/><line x1="0" y1="0" x2="-5" y2="-6"/><line x1="0" y1="0" x2="5" y2="-6"/></g>
+          <g transform="translate(35,175) rotate(-30)"><line x1="0" y1="0" x2="0" y2="8"/><line x1="0" y1="0" x2="-5" y2="-6"/><line x1="0" y1="0" x2="5" y2="-6"/></g>
+          <g transform="translate(175,170) rotate(200)"><line x1="0" y1="0" x2="0" y2="8"/><line x1="0" y1="0" x2="-5" y2="-6"/><line x1="0" y1="0" x2="5" y2="-6"/></g>
+          <g transform="translate(25,60) rotate(-80)"><line x1="0" y1="0" x2="0" y2="8"/><line x1="0" y1="0" x2="-5" y2="-6"/><line x1="0" y1="0" x2="5" y2="-6"/></g>
+        </g>
+      </svg>
+      <div class="org-tip">
+        <strong>B Cell</strong>
+        <span>B cells are the antibody factories — a single activated B cell can pump out 2,000 antibodies per second.</span>
+      </div>
+    </div>
+
+    <!-- CANCER CELL (amber glow, irregular membrane + multi-lobed nucleus) -->
+    <div class="organism o5">
+      <div class="org-halo halo-amber"></div>
+      <svg class="org-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="cc-glow"><stop offset="0%" stop-color="#FFA033" stop-opacity="0.55"/><stop offset="100%" stop-color="#FFA033" stop-opacity="0"/></radialGradient>
+          <filter id="cc-blur"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <circle cx="100" cy="100" r="85" fill="url(#cc-glow)" filter="url(#cc-blur)"/>
+        <path d="M100,25 Q140,30 160,55 Q185,80 180,110 Q188,140 155,160 Q125,180 95,175 Q60,180 40,155 Q15,130 25,100 Q20,65 55,45 Q75,25 100,25 Z"
+              fill="rgba(255,160,51,0.09)" stroke="#FFA033" stroke-width="1.5" opacity="0.8"/>
+        <ellipse cx="90" cy="85" rx="28" ry="22" fill="rgba(255,160,51,0.15)" stroke="#FFA033" stroke-width="1" opacity="0.9"/>
+        <ellipse cx="120" cy="115" rx="20" ry="18" fill="rgba(255,160,51,0.15)" stroke="#FFA033" stroke-width="1" opacity="0.9"/>
+        <circle cx="85" cy="82" r="5" fill="#FFA033" opacity="0.9"/>
+        <circle cx="122" cy="115" r="4" fill="#FFA033" opacity="0.85"/>
+      </svg>
+      <div class="org-tip">
+        <strong>Cancer Cell</strong>
+        <span>HeLa cells, taken from Henrietta Lacks in 1951, are still dividing in labs today — the first "immortal" human cell line.</span>
+      </div>
+    </div>
+
+    <!-- DENDRITIC CELL (blue glow, branching projections) -->
+    <div class="organism o6">
+      <div class="org-halo halo-blue"></div>
+      <svg class="org-art" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="dc-glow"><stop offset="0%" stop-color="#7B8CFF" stop-opacity="0.55"/><stop offset="100%" stop-color="#7B8CFF" stop-opacity="0"/></radialGradient>
+          <filter id="dc-blur"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <circle cx="100" cy="100" r="90" fill="url(#dc-glow)" filter="url(#dc-blur)"/>
+        <g stroke="#7B8CFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+          <path d="M100,100 Q95,55 75,20"/>
+          <path d="M100,100 Q140,80 175,50"/>
+          <path d="M100,100 Q158,110 190,140"/>
+          <path d="M100,100 Q115,155 130,190"/>
+          <path d="M100,100 Q65,140 25,170"/>
+          <path d="M100,100 Q35,105 10,85"/>
+          <path d="M100,100 Q60,75 25,40"/>
+        </g>
+        <circle cx="100" cy="100" r="42" fill="rgba(123,140,255,0.09)" stroke="#7B8CFF" stroke-width="1.5" opacity="0.85"/>
+        <circle cx="96" cy="96" r="18" fill="rgba(123,140,255,0.15)" stroke="#7B8CFF" stroke-width="1" opacity="0.9"/>
+        <circle cx="92" cy="92" r="3" fill="#7B8CFF"/>
+      </svg>
+      <div class="org-tip">
+        <strong>Dendritic Cell</strong>
+        <span>Dendritic cells are the immune system's messengers — they take samples from your tissues and show them to T-cells to decide what to attack.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="#top" class="nav-name">Pragnya</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#certificates">Credentials</a>
+        <a href="#contact">Say hi</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="wrap hero-content">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        <span>Currently at Eradivir · West Lafayette</span>
+      </div>
+
+      <h1 class="hero-title" id="hero-title-container"></h1>
+
+      <p class="hero-sub" id="hero-tagline">—</p>
+
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-k">Name</span>
+          <span class="meta-v" id="hero-name">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-k">Focus</span>
+          <span class="meta-v" id="hero-role">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-k">Based in</span>
+          <span class="meta-v" id="hero-location">—</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" id="link-cv" href="#" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn btn-ghost" id="link-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="#research">See research ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-num">01 / About</div>
+          <h2 class="section-title" id="about-headline">—</h2>
+        </div>
+        <div class="about-right">
+          <div id="about-paragraphs"></div>
+          <div class="hand-note" id="hand-note">
+            currently obsessed with early-detection assays &amp; anything that makes cancer education actually reach people.
+          </div>
+          <div class="quick-facts" id="quick-facts"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-header">
+        <div class="section-num">02 / Research</div>
+        <h2 class="section-title">Work I'm <em>proud</em> of.</h2>
+        <p class="section-desc">Six projects at the interface of tumor biology, immunotherapy, and translational drug discovery — some finished, some very much in progress.</p>
+      </div>
+      <div class="project-grid" id="project-list"></div>
+    </section>
+
+    <section id="experience" class="experience-section">
+      <div class="section-header">
+        <div class="section-num">03 / Experience</div>
+        <h2 class="section-title">The path so <em>far</em>.</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+
+      <div class="skills-block">
+        <div class="section-num" style="margin-bottom: 20px;">Core skills</div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section id="publications" class="pub-section">
+      <div class="section-header">
+        <div class="section-num">04 / Publications</div>
+        <h2 class="section-title">Writing &amp; <em>talks</em>.</h2>
+        <p class="section-desc">Papers, posters, and preprints — a running list.</p>
+      </div>
+      <div class="pub-list" id="pub-list"></div>
+    </section>
+
+    <section id="certificates" class="cert-section">
+      <div class="section-header">
+        <div class="section-num">05 / Credentials</div>
+        <h2 class="section-title">Certifications.</h2>
+      </div>
+      <div class="cert-grid" id="cert-grid"></div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-inner">
+        <div class="section-num">06 / Contact</div>
+        <h2 class="contact-title" id="contact-title">—</h2>
+        <p class="contact-desc" id="contact-message">—</p>
+        <div class="contact-email-line">
+          <span class="meta-k">Email me at</span>
+          <span id="contact-email-text">—</span>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-accent" id="contact-email" href="#">Email me →</a>
+          <a class="btn btn-ghost" id="link-cv-2" href="#" target="_blank" rel="noopener">Download CV</a>
+        </div>
+        <div class="contact-sig">— Pragnya</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© <span id="footer-year"></span> <span id="footer-name"></span> · Built with lots of coffee</div>
+      <div class="footer-note">Purdue University · West Lafayette</div>
+    </div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
